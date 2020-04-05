@@ -65,5 +65,5 @@ Resources
 -  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
 -  `Community Slack Channel <https://codeigniterchat.slack.com>`_
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+Report security issues to CodeIgniter's `Security Panel <mailto:security@codeigniter.com>`_
+or via CodeIgniter's `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
