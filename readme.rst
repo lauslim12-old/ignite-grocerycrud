@@ -10,8 +10,8 @@ This repository is live at: https://nicholasdw.com/grocery/
 Acknowledgement
 ***************
 I'd like to thank the CodeIgniter team and GroceryCRUD team.
-CodeIgniter Team: https://codeigniter.com/
-GroceryCRUD (John Skoumbourdis): https://www.grocerycrud.com/
+- CodeIgniter Team: https://codeigniter.com/
+- GroceryCRUD (John Skoumbourdis): https://www.grocerycrud.com/
 
 *****************************
 Architecture and Philosophies
@@ -35,20 +35,20 @@ issues, as well as missing features.
 Installation
 ************
 - Download or fork the repository.
-- Import the database that is located at `assets/sql` folder.
+- Import the database that is located at ``assets/sql`` folder.
 - Make sure the create a new database before importing the database!
-- The name of the database could be anything, default is 'dealership'.
-- Set the database credentials at `application/config/database.php`, usually username, password, and database name.
-- Copy the folder in your `htdocs` or webroot folder.
+- The name of the database could be anything, default is ``dealership``.
+- Set the database credentials at ``application/config/database.php``, usually username, password, and database name.
+- Copy the folder in your ``htdocs`` or webroot folder.
 - Run XAMPP/MAMP/Spark and launch the application.
 - Enjoy!
-(*) I added several more folders inside CI's default folders like `includes`, `assets`, etcetera for modularization.
+(*) I added several more folders inside CI's default folders like ``includes``, ``assets``, etcetera for modularization.
 
 *******
 Editing
 *******
-The place where I schedule my GroceryCRUD code is located at `application/controllers/Data.php` (controller)
-and `application/views/table_display.php`
+The place where I schedule my GroceryCRUD code is located at ``application/controllers/Data.php`` (controller)
+and ``application/views/table_display.php``
 
 *******
 License
