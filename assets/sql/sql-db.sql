@@ -1,4 +1,10 @@
-/* Create your own database then import this sql file! */
+/* Create your own database then import this sql file! 
+
+DROP DATABASE IF EXISTS dealership;
+CREATE DATABASE IF NOT EXISTS dealership;
+USE dealership;
+
+*/
 
 /* Making Tables */
 CREATE TABLE Pembeli (
@@ -161,6 +167,15 @@ CREATE TABLE Keluarga (
 	ON DELETE CASCADE
 )
 ENGINE=InnoDB;
+
+CREATE TABLE Ekstra (
+	ID_Ekstra INT NOT NULL AUTO_INCREMENT,
+	NamaDepan VARCHAR(255),
+	NamaBelakang VARCHAR(255),
+	Img TEXT,
+	PRIMARY KEY (ID_Ekstra)
+)
+ENGINE=InnnoDB;
 
 /* Populating Tables */
 INSERT INTO Pembeli VALUES
@@ -784,3 +799,9 @@ INSERT INTO Keluarga VALUES
 ('K0003', 'Sinzie', 'Full Asuransi', '2001-03-10', 'M'),
 ('K0004', 'Raul', 'Full Asuransi', '1999-05-13', 'M'),
 ('K0050', 'Maul', 'Tidak Asuransi', '1987-07-21', 'M');
+
+INSERT INTO Ekstra VALUES
+(1, 'Nicholas', 'Dwiarto', ''),
+(2, 'Attar', 'Kusuma', ''),
+(3, 'Sinzie', 'Winata', ''),
+(4, 'Sebastian', '', '')
