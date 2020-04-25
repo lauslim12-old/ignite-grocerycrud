@@ -48,7 +48,7 @@ Installation
 *******
 Editing
 *******
-The place where I schedule my GroceryCRUD code is located at ``application/controllers/Data.php`` (controller)
+The place where I schedule my GroceryCRUD code is located at ``application/controllers/Dealership.php`` (controller)
 and ``application/views/table_display.php``
 
 *******

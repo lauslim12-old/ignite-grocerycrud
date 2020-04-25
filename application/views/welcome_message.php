@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<p>If you want to edit the GroceryCRUD functions, you can go there at:</p>
 
-	<pre><code>application/controllers/Data.php</code></pre>
+	<pre><code>application/controllers/Dealership.php</code></pre>
 
 	<p>The view for GroceryCRUD functions can be edited at:</p>
 
