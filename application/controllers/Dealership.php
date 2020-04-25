@@ -6,10 +6,10 @@ class Dealership extends CI_Controller {
   function __construct() {
     parent::__construct();
     $this->load->database();
-		$this->load->library('grocery_CRUD');
+    $this->load->library('grocery_CRUD');
   }
 
-	public function output($output = null) {
+  public function output($output = null) {
     $this->load->view('table_display', (array) $output);
   }
   
@@ -68,10 +68,57 @@ class Dealership extends CI_Controller {
         ->fields('NamaPerusahaan', 'ZipCode', 'NoTelp', 'Email')
         
         // Follows CodeIgniter's validation rules.
-        ->set_rules('NamaPerusahaan', 'Nama Perusahaan', 'required')
-        ->set_rules('ZipCode', 'Zip Code', 'integer')
-        ->set_rules('NoTelp', 'Nomor Telepon', 'numeric')
-        ->set_rules('Email', 'Email', 'valid_email');
+        ->set_rules('NamaPerusahaan', 'Nama Perusahaan', 'required|min_length[2]')
+        ->set_rules('ZipCode', 'Zip Code', 'integer|required')
+        ->set_rules('NoTelp', 'Nomor Telepon', 'numeric|required')
+        ->set_rules('Email', 'Email', 'valid_email|required');
+
+    $output = $crud->render();
+    $this->output($output);
+  }
+
+  // 5. Callback function
+  public function callback() {
+    $crud = new grocery_CRUD();
+    $crud->set_table('ekstra')
+        ->set_subject('Data Dummy')
+        ->columns('ID_Ekstra', 'NamaDepan', 'NamaBelakang')
+        ->fields('ID_Ekstra', 'NamaDepan', 'NamaBelakang')
+
+        // Plus validations
+        ->set_rules('NamaDepan', 'Nama Depan', 'required|min_length[4]')
+
+        // Callback
+        ->callback_column('NamaDepan', array($this, 'callback_func'))
+        ->callback_column('NamaBelakang', [$this, 'callback_func'])
+
+        ->callback_field('NamaDepan', array($this, 'callback_func2'));
+
+    $output = $crud->render();
+    $this->output($output);
+  }
+
+  public function callback_func($value) {
+    return lcfirst($value);
+  }
+
+  public function callback_func2($val) {
+    return ucfirst($val) . " " . "<input type='text' value=" . strtoupper($val) . " />";
+  }
+
+  // 6. File Uploads
+  public function file_upload() {
+    $crud = new grocery_CRUD();
+    $crud->set_table('ekstra')
+        ->set_subject('Data Dummy')
+        ->columns('ID_Ekstra', 'NamaDepan', 'NamaBelakang', 'Img')
+        ->fields('ID_Ekstra', 'NamaDepan', 'NamaBelakang', 'Img')
+
+        // Plus validations
+        ->set_rules('NamaDepan', 'Nama Depan', 'required|min_length[4]')
+
+        // Uploading file (store by reference) (no need to add '/' in the beginning of the content)
+        ->set_field_upload('Img', 'assets/img/uploads');
 
     $output = $crud->render();
     $this->output($output);
