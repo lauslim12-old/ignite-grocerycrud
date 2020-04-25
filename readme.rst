@@ -10,6 +10,7 @@ This repository is live at: https://nicholasdw.com/grocery/
 Acknowledgement
 ***************
 I'd like to thank the CodeIgniter team and GroceryCRUD team.
+
 - CodeIgniter Team: https://codeigniter.com/
 - GroceryCRUD (John Skoumbourdis): https://www.grocerycrud.com/
 
