@@ -4,7 +4,6 @@ Ignite - GroceryCRUD
 This repository is powered by CodeIgniter and GroceryCRUD framework. The purpose of this repository is to showcase
 what CodeIgniter is capable of, and for personal practices. GroceryCRUD is also an easy framework to apply the
 concepts of Create, Read, Update, Delete to your own websites!
-This repository is live at: https://nicholasdw.com/grocery/
 
 ***************
 Acknowledgement
